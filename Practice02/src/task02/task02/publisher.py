@@ -15,8 +15,8 @@ class Task02(Node):
                 ('message', 'Hello, ROS2!')
             ])
 
-        self._topic = self.get_parameter('topic_name').get_parameter_value().string_value
-        self._text = self.get_parameter('text').get_parameter_value().string_value
+        self._topic = self.get_parameter('topic_name').value
+        self._text = self.get_parameter('text').value
 
         self._pub = self.create_publisher(String, self._topic, 10)
         self._timer = self.create_timer(0.5, self._on_timer)
