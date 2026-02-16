@@ -1,4 +1,4 @@
 publisher:
   ros__parameters:
-    topic_name="spgc/sender"
-    message="HEY"
+    topic_name: spgc/sender
+    message: HEY
