@@ -8,12 +8,8 @@ class Task02(Node):
         super().__init__('publisher')
         self.get_logger().info("Receiver node has been started")
 
-        self.declare_parameters(
-            namespace='',
-            parameters=[
-                ('topic_name', None),
-                ('message', 'Hello, ROS2!')
-            ])
+        self.declare_parameter('topic_name', 'spgc/sender')
+        self.declare_parameter('message', 'Hello, ROS2!')
 
         self._topic = self.get_parameter('topic_name').value
         self._text = self.get_parameter('text').value
