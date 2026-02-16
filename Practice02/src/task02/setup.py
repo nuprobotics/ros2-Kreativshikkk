@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-package_name = 'task01'
+package_name = 'task02'
 
 setup(
     name=package_name,
@@ -10,7 +10,6 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        ('share/' + package_name, ['receiver.launch.py']),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -25,7 +24,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'receiver = task01.receiver:main'
+            'publisher = task02.publisher:main'
         ],
     },
 )
